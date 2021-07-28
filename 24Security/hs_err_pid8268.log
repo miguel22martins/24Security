@@ -1,0 +1,195 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 117440512 bytes for Failed to commit area from 0x0000000091000000 to 0x0000000098000000 of length 117440512.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3301), pid=8268, tid=13684
+#
+# JRE version:  (11.0.10+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.10+9, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dmaven.multiModuleProjectDirectory=C:\Users\migue\OneDrive\Ambiente de Trabalho\24Security-main org.apache.maven.wrapper.MavenWrapperMain spring-boot:run
+
+Host: AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  , 8 cores, 6G,  Windows 10 , 64 bit Build 19041 (10.0.19041.928)
+Time: Thu Jul 15 01:53:27 2021 Hora de Verão de GMT elapsed time: 0.033391 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001cc5f357800):  JavaThread "Unknown thread" [_thread_in_vm, id=13684, stack(0x0000008d7ec00000,0x0000008d7ed00000)]
+
+Stack: [0x0000008d7ec00000,0x0000008d7ed00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5f35ea]
+V  [jvm.dll+0x77c65e]
+V  [jvm.dll+0x77dd2f]
+V  [jvm.dll+0x77e3f3]
+V  [jvm.dll+0x246c38]
+V  [jvm.dll+0x5f079a]
+V  [jvm.dll+0x5e53c5]
+V  [jvm.dll+0x2fba4c]
+V  [jvm.dll+0x2fb8d2]
+V  [jvm.dll+0x300586]
+V  [jvm.dll+0x344cff]
+V  [jvm.dll+0x344730]
+V  [jvm.dll+0x2d8cb8]
+V  [jvm.dll+0x2d9e06]
+V  [jvm.dll+0x757c77]
+V  [jvm.dll+0x7593ff]
+V  [jvm.dll+0x351a59]
+V  [jvm.dll+0x73aea0]
+V  [jvm.dll+0x3b929f]
+V  [jvm.dll+0x3bb7a1]
+C  [jli.dll+0x520b]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001cc5d9c1a10, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001cc5f36f000 GCTaskThread "GC Thread#0" [stack: 0x0000008d7ed00000,0x0000008d7ee00000] [id=8776]
+  0x000001cc5f3a0000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000008d7ee00000,0x0000008d7ef00000] [id=17944]
+  0x000001cc5f3a2800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000008d7ef00000,0x0000008d7f000000] [id=9828]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa67958337]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001cc5f3572f0] Heap_lock - owner thread: 0x000001cc5f357800
+
+Heap address: 0x0000000091000000, size: 1776 MB, Compressed Oops mode: Non-zero based: 0x0000000091000000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.016 Loaded shared library C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff786f00000 - 0x00007ff786f0d000 	C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\java.exe
+0x00007ffac2c90000 - 0x00007ffac2e85000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffac2a90000 - 0x00007ffac2b4d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffac0a20000 - 0x00007ffac0ce8000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffac0590000 - 0x00007ffac0690000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffaad1c0000 - 0x00007ffaad1d7000 	C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\jli.dll
+0x00007ffaba360000 - 0x00007ffaba375000 	C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\VCRUNTIME140.dll
+0x00007ffac28f0000 - 0x00007ffac2a90000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffaac060000 - 0x00007ffaac2fa000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.844_none_ca00b6081b84eb1d\COMCTL32.dll
+0x00007ffac0780000 - 0x00007ffac07a2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffac1030000 - 0x00007ffac10ce000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffac1e30000 - 0x00007ffac1e5a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffac0480000 - 0x00007ffac058b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffac0690000 - 0x00007ffac072d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffac24b0000 - 0x00007ffac24e0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffaa3a80000 - 0x00007ffaa3b1b000 	C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\msvcp140.dll
+0x00007ffa67670000 - 0x00007ffa681b3000 	C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\server\jvm.dll
+0x00007ffac2760000 - 0x00007ffac280c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffac26c0000 - 0x00007ffac275b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffac1f30000 - 0x00007ffac205b000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffac2420000 - 0x00007ffac2428000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffab7150000 - 0x00007ffab715a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffaaebd0000 - 0x00007ffaaebd9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffab5d90000 - 0x00007ffab5db7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffac2430000 - 0x00007ffac249b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffabecf0000 - 0x00007ffabed02000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffaaed60000 - 0x00007ffaaed70000 	C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\verify.dll
+0x00007ffabe740000 - 0x00007ffabe924000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffab3410000 - 0x00007ffab343c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffac09a0000 - 0x00007ffac0a20000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffaa7e70000 - 0x00007ffaa7e98000 	C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\java.dll
+0x00007ffaad390000 - 0x00007ffaad39a000 	C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\jimage.dll
+0x00007ffaaa4a0000 - 0x00007ffaaa4b7000 	C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.844_none_ca00b6081b84eb1d;C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\server
+
+VM Arguments:
+jvm_args: -Dmaven.multiModuleProjectDirectory=C:\Users\migue\OneDrive\Ambiente de Trabalho\24Security-main 
+java_command: org.apache.maven.wrapper.MavenWrapperMain spring-boot:run
+java_class_path (initial): C:\Users\migue\OneDrive\Ambiente de Trabalho\24Security-main\.mvn\wrapper\maven-wrapper.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 117440512                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1862270976                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\
+PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\migue\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin;C:\Users\migue\AppData\Local\Microsoft\WindowsApps;;C:\Users\migue\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=migue
+LANG=pt_PT.UTF-8
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.928)
+OS uptime: 53 days 21:39 hours
+
+CPU:total 8 (initial active 8) (8 cores per cpu, 2 threads per core) family 23 model 24 stepping 1 microcode 0x0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, ht, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, s
+
+Memory: 4k page, system-wide physical 7103M (1102M free)
+TotalPageFile size 17343M (AvailPageFile size 70M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 60M, peak: 171M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.10+9) for windows-amd64 JRE (11.0.10+9), built on Jan 20 2021 06:07:07 by "" with MS VC++ 15.9 (VS2017)
+
+END.
